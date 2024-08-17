@@ -23,7 +23,7 @@ public class Adresse {
 	private Long id;
 	private String ville;
 	private String codepostal;
-	 @ManyToOne(optional = false,fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER,optional = false)
 	    private Utilisateur utilisateur;
 	
 }

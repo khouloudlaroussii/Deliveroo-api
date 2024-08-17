@@ -1,11 +1,13 @@
 package com.example.demo.dto;
 
 import com.example.demo.model.Grade;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
+@Data
 
 public class UtilisateurDTO {
 	@NotBlank
@@ -20,5 +22,19 @@ public class UtilisateurDTO {
 	private String mdp ;
 	@NotBlank
 	private Grade grade;
+	@JsonIgnoreProperties("utilisateurs")
+	private ReclamationDTO reclamation;
+	@JsonIgnoreProperties("utilisateurs")
+	private ProfilDTO profils;
+	@JsonIgnoreProperties("utilisateurs")
+	private PickupDTO pickups;
+	@JsonIgnoreProperties("utilisateurs")
+	private LivraisonDTO livrasions;
+	@JsonIgnoreProperties("utilisateurs")
+	private EvaluationDTO evaluations;
+	@JsonIgnoreProperties("utilisateurs")
+	private DemandeDTO demande;
+	@JsonIgnoreProperties("utilisateurs")
+	private AdresseDTO adresses;
 
 }

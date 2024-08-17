@@ -1,9 +1,5 @@
 package com.example.demo.model;
 import java.util.List;
-
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -57,7 +53,6 @@ public class Utilisateur {
 	@OneToMany(mappedBy = "utilisateur")
     private List<Demande> demandes;
 	@OneToMany(mappedBy = "utilisateur")
-    @OnDelete(action = OnDeleteAction.CASCADE)
     private List<Adresse> adresses;
 	
 	

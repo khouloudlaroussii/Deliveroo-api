@@ -1,8 +1,9 @@
 package com.example.demo.mappers;
+import org.modelmapper.ModelMapper;
 
 import com.example.demo.dto.UtilisateurDTO;
 import com.example.demo.model.Utilisateur;
-import org.modelmapper.ModelMapper;
+
 
 public class UtilisateurMapper {
 

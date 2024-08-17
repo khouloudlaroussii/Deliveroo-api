@@ -1,6 +1,9 @@
 package com.example.demo.dto;
 
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
@@ -16,7 +19,8 @@ public class ProfilDTO {
 	private String email ;
 	@NotBlank
 	private String modp ;
-
+	 @JsonIgnoreProperties("profils")
+		private UtilisateurDTO utilisateur;
 	
 
 }

@@ -1,10 +1,11 @@
 package com.example.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.Profil;
-
-public interface PrrofilRepository  extends JpaRepository<Profil, Long> {
+@Repository
+public interface ProfilRepository  extends JpaRepository<Profil, Long> {
 
 }
 

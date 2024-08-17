@@ -1,10 +1,14 @@
 package com.example.demo.dto;
 
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
 @Data
+
 public class LivraisonDTO {
     @NotBlank
 	private String nom;
@@ -16,5 +20,6 @@ public class LivraisonDTO {
 	private String adresse;
 	@Positive
 	private String dure;
-	
+	 @JsonIgnoreProperties("livrasions")
+		private UtilisateurDTO utilisateur;
 }
